@@ -26,3 +26,9 @@ To get public ip, use
 ```bash
    curl ip.sb
 ```
+
+To reload prometheus, use
+
+```bash
+   curl -XPUT http://127.0.0.1:9090/-/reload
+```
