@@ -1,0 +1,16 @@
+services:
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node_exporter
+    command:
+      - '--path.rootfs=/host'
+    network_mode: host
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - '/:/host:ro,rslave'
+
+# scrape_configs:
+#   - job_name: 'node_exporter'
+#     static_configs:
+#       - targets: ['node_exporter:9100']
