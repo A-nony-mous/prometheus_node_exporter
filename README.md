@@ -20,3 +20,9 @@ Add config to prometheus.yml:
     static_configs:
       - targets: ['JOB_NAME:9100']
 ```
+
+To get public ip, use
+
+```bash
+   curl ip.sb
+```
