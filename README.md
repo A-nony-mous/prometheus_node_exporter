@@ -12,3 +12,11 @@ Deploy Prometheus Node Exporter for monitoring machine metrics such as CPU, memo
    cd prometheus_node_exporter
    docker compose up -d
 ```
+
+Add config to prometheus.yml:
+
+```yml
+  - job_name: 'JOB_NAME'
+    static_configs:
+      - targets: ['JOB_NAME:9100']
+```
